@@ -1,0 +1,15 @@
+title: Sistema de Gestão de Património
+description: Solução robusta e modular para o controlo total do ciclo de vida de ativos, inventário e estrutura organizacional.
+email: seu-email@exemplo.com # Opcional
+
+# Configurações de Build
+theme: jekyll-theme-minimal
+exclude:
+  - README.md
+  - _pocs
+  - setup_site_structure.sh
+  - .gitignore
+
+# Opções de URL (Importante para o GitHub Pages)
+baseurl: "" # Deixe vazio se for o repositório principal .github.io
+url: "https://ortizdavid.github.io"
