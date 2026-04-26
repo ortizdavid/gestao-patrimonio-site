@@ -164,6 +164,7 @@ section {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
+    box-shadow: 0 10px 30px -15px rgba(59, 130, 246, 0.2); /* Brilho azul subtil */
 }
 
 /* Footer Styles */
