@@ -13,3 +13,6 @@ exclude:
 # Opções de URL (Importante para o GitHub Pages)
 baseurl: "" # Deixe vazio se for o repositório principal .github.io
 url: "https://ortizdavid.github.io"
+
+include:
+  - google*.html
