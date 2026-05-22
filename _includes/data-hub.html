@@ -21,8 +21,9 @@
                 <div>
                     <span style="color: #94a3b8; font-size: 0.8rem; display: block; margin-bottom: 0.5rem; font-weight: 600; text-align: right;">FORMATOS DISPONÍVEIS</span>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <button class="btn-export" onclick="switchPreview('Excel')" style="background: #166534; color: #bbf7d0; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;"><i class="bi bi-file-earmark-excel me-1"></i> Excel (XLSX)</button>
-                        <button class="btn-export" onclick="switchPreview('PDF')" style="background: #991b1b; color: #fecaca; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;"><i class="bi bi-file-earmark-pdf me-1"></i> PDF Corporativo</button>
+                        <button class="btn-export" onclick="switchPreview('Excel')" style="background: #166534; color: #bbf7d0; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;"><i class="bi bi-file-earmark-excel me-1"></i> Excel</button>
+                        <button class="btn-export" onclick="switchPreview('CSV')" style="background: #065f46; color: #a7f3d0; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;"><i class="bi bi-filetype-csv me-1"></i> CSV</button>
+                        <button class="btn-export" onclick="switchPreview('PDF')" style="background: #991b1b; color: #fecaca; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</button>
                         <button class="btn-export" onclick="switchPreview('JSON')" style="background: #1e293b; color: #38bdf8; border: 1px solid #38bdf8; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-family: monospace; cursor: pointer; transition: all 0.2s;">{ JSON }</button>
                         <button class="btn-export" onclick="switchPreview('XML')" style="background: #1e293b; color: #a78bfa; border: 1px solid #a78bfa; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-family: monospace; cursor: pointer; transition: all 0.2s;">&lt; XML &gt;</button>
                     </div>
@@ -32,7 +33,7 @@
             <!-- Contentor de Previews Dinâmicos -->
             <div id="preview-container" style="background: #020617; border-radius: 8px; padding: 1.5rem; min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-left: 4px solid #38bdf8; transition: all 0.3s ease;">
                 
-                <!-- 1. VIEW DEFAULT: JSON -->
+                <!-- 1. VIEW: JSON (Default) -->
                 <div id="view-JSON" class="preview-panel" style="width: 100%; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #34d399;">
 <pre style="margin: 0; white-space: pre-wrap;">[
   {
@@ -46,7 +47,7 @@
 ]</pre>
                 </div>
 
-                <!-- 2. VIEW: EXCEL (Folha de Cálculo simulada em CSS) -->
+                <!-- 2. VIEW: EXCEL -->
                 <div id="view-Excel" class="preview-panel" style="display: none; width: 100%;">
                     <div style="background: #107c41; color: white; padding: 6px 12px; font-size: 0.75rem; font-weight: bold; font-family: sans-serif; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 8px;">
                         <i class="bi bi-file-earmark-excel-fill"></i> Ativos_Patrimonio_Q2.xlsx - Excel
@@ -69,7 +70,15 @@
                     </table>
                 </div>
 
-                <!-- 3. VIEW: PDF (Documento Ofical simulado em CSS) -->
+                <!-- 3. VIEW: CSV (Visual de Dataset bruto/Data Science) -->
+                <div id="view-CSV" class="preview-panel" style="display: none; width: 100%; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #34d399;">
+                    <div style="color: #64748b; font-size: 0.75rem; margin-bottom: 0.5rem; border-bottom: 1px solid #1e293b; padding-bottom: 4px;"># dados_exportados.csv (RFC 4180)</div>
+<pre style="margin: 0; white-space: pre-wrap; color: #e2e8f0;"><span style="color: #fbbf24;">id,designacao,localizacao,valor_aquisicao,estado</span>
+ATV-2026-8819,"Servidor Dell PowerEdge","Data Center - Sede",14500.00,"Operacional"
+ATV-2026-8820,"Central Multimédia Sónia","Sala Reuniões 3",3200.00,"Operacional"</pre>
+                </div>
+
+                <!-- 4. VIEW: PDF -->
                 <div id="view-PDF" class="preview-panel" style="display: none; width: 100%; max-width: 500px; background: white; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; font-family: serif; color: #2d3748; text-align: left;">
                     <div style="border-bottom: 2px solid #cc9f26; padding-bottom: 0.5rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
                         <h5 style="margin: 0; font-family: sans-serif; font-weight: 700; font-size: 1rem; color: #1a202c; text-transform: uppercase;"><i class="bi bi-shield-check text-primary"></i> Relatório Geral de Ativos</h5>
@@ -85,7 +94,7 @@
                     </div>
                 </div>
 
-                <!-- 4. VIEW: XML -->
+                <!-- 5. VIEW: XML -->
                 <div id="view-XML" class="preview-panel" style="display: none; width: 100%; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #a78bfa;">
 <pre style="margin: 0; white-space: pre-wrap;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;inventario&gt;
@@ -102,21 +111,25 @@
     </div>
 </section>
 
-<!-- Lógica de Alternância Rápida -->
+<!-- Lógica de Alternância Atualizada -->
 <script>
 function switchPreview(formato) {
     // 1. Esconde todos os painéis de preview
     const panels = document.querySelectorAll('.preview-panel');
     panels.forEach(p => p.style.display = 'none');
     
-    // 2. Altera a cor da borda esquerda do contentor para combinar com o formato
+    // 2. Controla o comportamento visual do contentor com base no formato
     const container = document.getElementById('preview-container');
+    
     if (formato === 'Excel') {
         container.style.borderColor = '#107c41';
         container.style.background = '#f3f2f1';
+    } else if (formato === 'CSV') {
+        container.style.borderColor = '#065f46';
+        container.style.background = '#020617'; // Mantém dark mode estlo dev
     } else if (formato === 'PDF') {
         container.style.borderColor = '#991b1b';
-        container.style.background = '#e2e8f0'; // Fundo cinza para o papel branco destacar
+        container.style.background = '#e2e8f0';
     } else if (formato === 'JSON') {
         container.style.borderColor = '#38bdf8';
         container.style.background = '#020617';
