@@ -250,3 +250,9 @@ section {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3));
 }
+
+.btn-export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    filter: brightness(1.2);
+}
