@@ -1,44 +1,50 @@
 <section id="faq" class="py-24" style="background: var(--bg-main);">
     <div class="container">
         <div class="section-title" style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.2rem; font-weight: 800;">Perguntas Frequentes</h2>
-            <p class="text-muted">Respostas diretas sobre a implementação e operação do sistema.</p>
+            <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Arquitetura & Conformidade</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff; margin-top: 0.5rem;">Perguntas Frequentes</h2>
+            <p class="text-muted">Respostas diretas sobre a engenharia, segurança e operação do sistema.</p>
         </div>
 
         <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
             
-            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3);">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">O sistema funciona sem internet?</h4>
-                <p class="text-muted" style="font-size: 0.95rem;">
-                    Sim. Como a instalação é feita no servidor local da sua empresa (On-Premise), o acesso pode ser feito via rede interna (LAN), garantindo operação total mesmo sem conectividade externa.
+            <!-- PERGUNTA 1: Permite exportar e como funciona? -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">O sistema permite a exportação de dados? Como é feito o processo?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Sim, totalmente. A plataforma possui um **motor de extração nativo** integrado diretamente na interface de listagem de ativos. O processo é instantâneo: basta aplicar os filtros desejados (como filial, departamento ou período) e clicar no formato pretendido para descarregar os dados processados em tempo real, sem intermediários.
                 </p>
             </div>
 
-            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3);">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Como é feita a segurança dos dados?</h4>
-                <p class="text-muted" style="font-size: 0.95rem;">
-                    Os dados residem no seu próprio servidor PostgreSQL. O sistema utiliza autenticação robusta e logs de auditoria detalhados, permitindo rastrear cada alteração feita por qualquer utilizador.
+            <!-- PERGUNTA 2: Quais os formatos? (O coração do que fizemos) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Quais formatos de ficheiro são suportados na exportação de ativos?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Para garantir total interoperabilidade, o sistema suporta 5 formatos estratégicos: **Excel (.xlsx)** para gestão financeira clássica; **CSV** otimizado para ferramentas de BI e Data Science; **PDF** com assinaturas criptográficas pronto para auditorias oficiais; além de **JSON** e **XML** para integração direta com ERPs modernos ou sistemas legados (como SAP e Primavera).
                 </p>
             </div>
 
-            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3);">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Existe um limite de ativos ou utilizadores?</h4>
-                <p class="text-muted" style="font-size: 0.95rem;">
-                    Não. A licença perpétua Enterprise permite o registo de ativos e a criação de contas de utilizador sem qualquer custo adicional. O limite é apenas a capacidade do seu hardware.
+            <!-- PERGUNTA 3: Vantagens/Vendor Lock-in -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Qual é a vantagem estratégica deste modelo de extração para a minha empresa?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    A principal vantagem é a **eliminação do aprisionamento tecnológico (vendor lock-in)**. Os dados patrimoniais pertencem à sua empresa. Ao expor os dados em formatos universais e estruturados, o seu negócio ganha autonomia para migrar, cruzar informações em ecossistemas de Business Intelligence ou alimentar auditorias externas sem custos adicionais de desenvolvimento.
                 </p>
             </div>
 
-            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3);">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">É possível importar dados de planilhas Excel?</h4>
-                <p class="text-muted" style="font-size: 0.95rem;">
-                    Sim. Durante a fase de implementação e instalação, auxiliamos na migração e carga inicial dos dados existentes para garantir uma transição suave para o novo sistema.
+            <!-- PERGUNTA 4: Segurança da Exportação/RBAC (Mantida e refinada) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Qualquer utilizador pode exportar a base de dados de ativos completa?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Não. A extração de dados em lote é protegida pelo sistema de controlo de acesso baseado em funções (RBAC). É possível bloquear ou permitir a exportação de relatórios sensíveis de forma cirúrgica, garantindo que apenas perfis autorizados (como Diretores Financeiros ou Auditores Chefes) tenham acesso aos downloads em massa.
                 </p>
             </div>
 
-            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3);">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Como funciona o suporte técnico após a instalação?</h4>
-                <p class="text-muted" style="font-size: 0.95rem;">
-                    Oferecemos um período de garantia técnica e manutenção preventiva. Planos de suporte contínuo podem ser contratados para garantir atualizações e assistência prioritária.
+            <!-- PERGUNTA 5: Integridade/Imutabilidade (Mantida pelo valor técnico) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Como garantir que os dados exportados correspondem à realidade do inventário?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Cada alteração no sistema gera um Hash SHA-256 encadeado. Ao exportar relatórios oficiais (como o formato PDF), o sistema injeta a assinatura criptográfica correspondente do estado atual do banco de dados. Qualquer tentativa de adulteração manual nos dados após a exportação poderá ser facilmente detetada cruzando a assinatura com o servidor local.
                 </p>
             </div>
 
