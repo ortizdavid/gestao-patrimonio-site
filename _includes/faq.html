@@ -1,14 +1,65 @@
 <section id="faq" class="py-24" style="background: var(--bg-main);">
     <div class="container">
+        
+        <!-- Cabeçalho da Secção Reajustado para Negócio e Tecnologia -->
         <div class="section-title" style="text-align: center; margin-bottom: 4rem;">
-            <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Arquitetura & Conformidade</span>
+            <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Eficiência & Conformidade</span>
             <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff; margin-top: 0.5rem;">Perguntas Frequentes</h2>
-            <p class="text-muted">Respostas diretas sobre a engenharia, segurança e operação do sistema.</p>
+            <p class="text-muted">Respostas diretas sobre o retorno financeiro, segurança e operação do sistema.</p>
         </div>
 
+        <!-- Contentor Único Alinhado a 800px -->
         <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
             
-            <!-- PERGUNTA 1: Permite exportar e como funciona? -->
+            <!-- 1. O Inventário Anual (Foco em Tempo) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Na prática, quanto tempo este sistema poupa à minha equipa no inventário anual?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Em média, as organizações reduzem o tempo de auditoria física de património em até **70%**. Como os ativos já estão pré-alocados por filiais, salas e responsáveis com histórico em tempo real, o inventário anual deixa de ser um processo caótico de semanas de contagem manual e passa a ser apenas uma verificação rápida por amostragem digital.
+                </p>
+            </div>
+
+            <!-- 2. O Controlo de Desvios (Foco no RH/Operações) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Consigo saber instantaneamente com whom está um portátil específico ou uma viatura para evitar perdas?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Sim, com apenas dois cliques. O módulo de **Capital Humano** cruza instantaneamente a ficha do funcionário com o módulo de **Gestão de Ativos**. Se um equipamento desaparecer ou se um colaborador se desligar da empresa, o RH ou as Operações sabem exatamente que bens (e faturas) estão sob a responsabilidade jurídica dele, evitando desvios financeiros.
+                </p>
+            </div>
+
+            <!-- 3. Auditoria Instantânea (Foco no CFO) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Consigo extrair um relatório limpo e pronto para uma auditoria fiscal com apenas um clique?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Exatamente. O motor de extração gera relatórios em formato **PDF oficial** e **Excel (.xlsx)** já formatados segundo os padrões de conformidade regulatória. Sem necessidade de tratamento de dados posterior: o documento sai pronto para ser entregue à administração, peritos fiscais ou auditores externos.
+                </p>
+            </div>
+
+            <!-- 4. O Histórico e Ciclo de Vida (Baseado em asset_event_handler.go) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">O sistema regista o histórico de manutenções, avarias ou sinistros de um bem?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Sim, de forma cronológica e imutável. Através do **Rastreio de Eventos**, cada alteração de estado (como um equipamento enviado para reparação, um veículo que sofreu um sinistro ou uma atualização de hardware) fica gravada no histórico permanente do ativo. Isto permite avaliar se um bem ainda é rentável ou se está a gerar custos excessivos de manutenção.
+                </p>
+            </div>
+
+            <!-- 5. Vinculação de Faturas (Baseado em asset_invoice_handler.go) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">É possível associar faturas de compra e garantias diretamente aos ativos?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    Completamente. O sistema permite anexar e gerir a documentação fiscal e contratual de cada bem (faturas, termos de garantia e apólices de seguro) na ficha do ativo. Em caso de fiscalização ou necessidade de acionar uma garantia, a sua equipa não perde horas em arquivos físicos: o documento digital está à distância de um clique.
+                </p>
+            </div>
+
+            <!-- 6. Classificação Inteligente (Baseado em asset_class/category/subcategory_handlers) -->
+            <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
+                <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Como o sistema organiza diferentes tipos de património (ex: viaturas vs. portáteis)?</h4>
+                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
+                    O sistema utiliza uma estrutura de classificação em árvore dividida em **Classes, Categorias e Subcategorias**. Isto significa que pode catalogar desde frotas automóveis a licenças de software ou mobiliário de escritório, aplicando regras de depreciação, campos de características e filtros de pesquisa específicos para cada tipo de recurso de forma isolada.
+                </p>
+            </div>
+
+            <!-- 4. Permite exportar e como funciona? -->
             <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
                 <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">O sistema permite a exportação de dados? Como é feito o processo?</h4>
                 <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
@@ -16,7 +67,7 @@
                 </p>
             </div>
 
-            <!-- PERGUNTA 2: Quais os formatos? (O coração do que fizemos) -->
+            <!-- 5. Quais os formatos? -->
             <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
                 <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Quais formatos de ficheiro são suportados na exportação de ativos?</h4>
                 <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
@@ -24,7 +75,7 @@
                 </p>
             </div>
 
-            <!-- PERGUNTA 3: Vantagens/Vendor Lock-in -->
+            <!-- 6. Vantagens/Vendor Lock-in -->
             <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
                 <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Qual é a vantagem estratégica deste modelo de extração para a minha empresa?</h4>
                 <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
@@ -32,15 +83,15 @@
                 </p>
             </div>
 
-            <!-- PERGUNTA 4: Segurança da Exportação/RBAC (Mantida e refinada) -->
+            <!-- 7. Segurança da Exportação/RBAC -->
             <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
                 <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Qualquer utilizador pode exportar a base de dados de ativos completa?</h4>
                 <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
-                    Não. A extração de dados em lote é protegida pelo sistema de controlo de acesso baseado em funções (RBAC). É possível bloquear ou permitir a exportação de relatórios sensíveis de forma cirúrgica, garantindo que apenas perfis autorizados (como Diretores Financeiros ou Auditores Chefes) tenham acesso aos downloads em massa.
+                    Não. A extração de dados em lote é protegida pelo sistema de controlo de acesso baseado em funções (RBAC). É possível bloquear ou permitir a exportação de relatórios sensíveis de forma cirúrgica, granting que apenas perfis autorizados (como Diretores Financeiros ou Auditores Chefes) tenham acesso aos downloads em massa.
                 </p>
             </div>
 
-            <!-- PERGUNTA 5: Integridade/Imutabilidade (Mantida pelo valor técnico) -->
+            <!-- 8. Integridade/Imutabilidade -->
             <div class="card" style="padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 8px;">
                 <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">Como garantir que os dados exportados correspondem à realidade do inventário?</h4>
                 <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 0;">
